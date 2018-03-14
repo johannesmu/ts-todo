@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title To Do List
+    meta(name='viewport',content='width=device-width,initial-scale=1.0')
+  body
+    header.header
+      h1 To Do List
+      form#task-form
+        label(for='task-input')
+        input#task-input(type='text',placeholder='Add Task')
+    .tasks
+      ul#task-list
+    footer.footer
+      nav.buttons
+        button(type='button') Remove
+        button(type='button') Archive
+      
