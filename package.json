@@ -1,0 +1,25 @@
+{
+  "name": "todo18_ts",
+  "version": "1.0.0",
+  "description": "todo list using typescript and es6 modules",
+  "main": "start.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannesmu/ts-todo.git"
+  },
+  "keywords": [
+    "todo",
+    "typescript",
+    "es6",
+    "modules"
+  ],
+  "author": "johannes m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johannesmu/ts-todo/issues"
+  },
+  "homepage": "https://github.com/johannesmu/ts-todo#readme"
+}
