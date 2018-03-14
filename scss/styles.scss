@@ -1,0 +1,29 @@
+@import '_vars.scss';
+@import '_imports.scss';
+
+html,body{
+  min-height: 100vh;
+}
+body{
+  @include reset;
+  background-color: $main-color;
+  font-family: $main-font-family;
+}
+img{
+  max-width: 100%;
+}
+.row{
+  @include flex(row);
+}
+header{
+  background-color: darken($main-color,15%);
+  .logo{
+    max-width: 36px;
+  }
+  .row{
+    @include justify(space-between);
+    h1{
+      @include reset;
+    }
+  }
+}

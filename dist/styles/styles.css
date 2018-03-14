@@ -1,0 +1,25 @@
+html, body {
+  min-height: 100vh; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2edca;
+  font-family: arial, helvetica, sans-serif; }
+
+img {
+  max-width: 100%; }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+
+header {
+  background-color: #e3d98c; }
+  header .logo {
+    max-width: 36px; }
+  header .row {
+    justify-content: space-between; }
+    header .row h1 {
+      margin: 0;
+      padding: 0; }

@@ -1,0 +1,13 @@
+@mixin reset{
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($direction){
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin justify($pos){
+  justify-content: $pos;
+}
