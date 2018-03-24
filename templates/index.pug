@@ -5,19 +5,21 @@ html
     meta(name='viewport',content='width=device-width,initial-scale=1.0')
     link(rel='stylesheet',href='./styles/styles.css')
   body
-    header.header
-      .row
-        .logo
-          img.logo(src='./images/logo.svg')
-        h1 To Do List
-      form#task-form
+    .app
+      header.header
         .row
-          input#task-input(type='text',placeholder='Add Task')
-          button(type='button') Add
-    main.main
-      ul#task-list
-    footer.footer
-      nav.buttons
-        button(type='button') Remove
-        button(type='button') Archive
+          .logo
+            img.logo(src='./images/logo.svg')
+          h1.app-title To Do List
+        form#task-form
+          .row
+            input#task-input(type='text',placeholder='Add Task')
+            button#task-add(type='button') Add
+      main.main
+        ul#task-list
+          li buy milk
+      footer.footer
+        nav.buttons
+          button(type='button') Remove
+          button(type='button') Archive
       

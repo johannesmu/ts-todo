@@ -1,5 +1,5 @@
 
-export default class Task{
+export class Task{
   name:string;
   id:number;
   status:boolean;
@@ -9,4 +9,3 @@ export default class Task{
     this.status = false;
   }
 }
-

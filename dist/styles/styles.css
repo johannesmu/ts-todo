@@ -7,19 +7,44 @@ body {
   background-color: #f2edca;
   font-family: arial, helvetica, sans-serif; }
 
-img {
+.app img {
   max-width: 100%; }
 
-.row {
+.app .row {
   display: flex;
   flex-direction: row; }
 
-header {
+.app header {
   background-color: #e3d98c; }
-  header .logo {
-    max-width: 36px; }
-  header .row {
+  .app header .logo {
+    max-width: 48px; }
+    .app header .logo img {
+      display: block;
+      max-width: 100%; }
+  .app header .row {
     justify-content: space-between; }
-    header .row h1 {
+    .app header .row h1 {
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      font-size: 1.2em; }
+
+.app #task-form .row #task-input {
+  flex: 1;
+  border: 1px solid #cccccc;
+  display: block;
+  background-color: #eee;
+  padding: 12px; }
+
+.app #task-form .row #task-input:focus {
+  outline: 0;
+  background-color: #fff; }
+
+.app #task-form .row #task-add {
+  padding: 12px;
+  min-width: 100px;
+  background-color: #d9cb63; }
+
+.app #task-form .row #task-add:focus {
+  outline: 0;
+  background-color: #837820;
+  color: #fff; }
