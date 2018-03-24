@@ -11,3 +11,15 @@
 @mixin justify($pos){
   justify-content: $pos;
 }
+
+@mixin box{
+  box-sizing: border-box;
+}
+
+@mixin block{
+  display: block;
+}
+@mixin image-style{
+  @include block;
+  max-width: 100%;
+}

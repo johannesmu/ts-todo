@@ -9,7 +9,7 @@ var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
 
 var buildpath = './dist';
- 
+
 gulp.task('ts', function () {
     return gulp.src('./ts/*.ts')
         .pipe(ts({

@@ -9,6 +9,7 @@ body{
   background-color: $main-color;
   font-family: $main-font-family;
 }
+<<<<<<< HEAD
 img{
   max-width: 100%;
 }
@@ -19,11 +20,54 @@ header{
   background-color: darken($main-color,15%);
   .logo{
     max-width: 48px;
+=======
+.app{
+  img{
+    max-width: 100%;
+>>>>>>> e4fb36a805972f22f1c19aa0147319eba8ea14cc
   }
   .row{
-    @include justify(space-between);
-    h1{
-      @include reset;
+    @include flex(row);
+  }
+  header{
+    background-color: darken($main-color,15%);
+    .logo{
+      max-width: 48px;
+      img{
+        @include image-style;
+      }
+    }
+    .row{
+      @include justify(space-between);
+      h1{
+        @include reset;
+        font-size: 1.2em;
+      }
+    }
+  }
+  #task-form{
+    .row{
+      #task-input{
+        flex: 1;
+        border:1px solid #cccccc;
+        @include block;
+        background-color:#eee;
+        padding: $form-padding;
+      }
+      #task-input:focus{
+        outline: 0;
+        background-color:#fff;
+      }
+      #task-add{
+        padding: $form-padding;
+        min-width:100px;
+        background-color: darken($main-color,25%);
+      }
+      #task-add:focus{
+        outline:0;
+        background-color: darken($main-color,55%);
+        color:#fff;
+      }
     }
   }
 }
