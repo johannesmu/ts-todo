@@ -13,7 +13,8 @@ var buildpath = './dist';
 gulp.task('ts', function () {
     return gulp.src('./ts/*.ts')
         .pipe(ts({
-            noImplicitAny: true,
+            //noImplicitAny: true,
+            module: 'amd',
             outFile: 'main.js'
         }))
         .pipe(gulp.dest(buildpath+'/js'));
