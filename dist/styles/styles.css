@@ -7,6 +7,14 @@ body {
   background-color: #f2edca;
   font-family: arial, helvetica, sans-serif; }
 
+img {
+  display: block;
+  max-width: 100%; }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+
 .app img {
   max-width: 100%; }
 
@@ -16,18 +24,12 @@ body {
 
 .app header {
   background-color: #e3d98c; }
-<<<<<<< HEAD
-  header .logo {
-    max-width: 48px; }
-  header .row {
-=======
   .app header .logo {
     max-width: 48px; }
     .app header .logo img {
       display: block;
       max-width: 100%; }
   .app header .row {
->>>>>>> e4fb36a805972f22f1c19aa0147319eba8ea14cc
     justify-content: space-between; }
     .app header .row h1 {
       margin: 0;

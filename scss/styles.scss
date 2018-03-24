@@ -11,15 +11,11 @@ body{
 }
 
 img{
-  max-width: 100%;
+  @include image-style;
 }
 .row{
   @include flex(row);
 }
-header{
-  background-color: darken($main-color,15%);
-  .logo{
-    max-width: 48px;
 
 .app{
   img{
@@ -70,3 +66,4 @@ header{
     }
   }
 }
+
