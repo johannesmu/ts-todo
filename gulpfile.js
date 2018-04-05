@@ -14,7 +14,7 @@ gulp.task('ts', function () {
     return gulp.src('./ts/*.ts')
         .pipe(ts({
             //noImplicitAny: true,
-            module: 'amd',
+            module: 'es6',
             outFile: 'main.js'
         }))
         .pipe(gulp.dest(buildpath+'/js'));

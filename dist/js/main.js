@@ -1,20 +1,24 @@
-var storage = {};
-define("task-class", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
-    var Task = /** @class */ (function () {
-        function Task(name) {
-            this.name = name;
-            this.id = new Date().getTime();
-            this.status = false;
+function storeData(data) {
+    try {
+        if (window.localStorage) {
+            window.localStorage.setItem('tasks', JSON.stringify(data));
+            return true;
         }
-        return Task;
-    }());
-    exports.Task = Task;
-});
-define("ui-module", ["require", "exports"], function (require, exports) {
-    "use strict";
-    exports.__esModule = true;
-    var form = 'test';
-    var dick = 'test';
-});
+    }
+    catch (error) {
+        console.log(error.message);
+    }
+}
+function readData() {
+    try {
+        if (window.localStorage) {
+            var tasks = JSON.parse(window.localStorage.getItem('tasks'));
+            return tasks;
+        }
+    }
+    catch (error) {
+        console.log(error.message);
+    }
+}
+var test = 'test';
+var task = "hello";

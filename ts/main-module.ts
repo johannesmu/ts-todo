@@ -1,2 +1,2 @@
-import {Task} from "./ts/task-class.ts";
+import {Task} from "./task-class";
 

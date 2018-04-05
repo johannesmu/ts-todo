@@ -24,6 +24,7 @@
   "homepage": "https://github.com/johannesmu/ts-todo#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
+    "browserify": "^16.1.1",
     "browsersync": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.2.0",
@@ -33,7 +34,9 @@
     "gulp-typescript": "^4.0.1",
     "gulp-watch": "^5.0.0",
     "run-sequence": "^2.2.1",
+    "tsify": "^3.0.4",
     "typescript": "^2.7.2",
+    "vinyl-source-stream": "^2.0.0",
     "webpack": "^4.1.1"
   },
   "dependencies": {}
