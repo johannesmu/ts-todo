@@ -1,4 +1,4 @@
-function storeData( data: any ){
+export function storeData( data: any ){
   try{
     if(window.localStorage){
   window.localStorage.setItem('tasks', JSON.stringify(data));
@@ -10,7 +10,7 @@ catch(error){
 }
 }
 
-function readData(){
+export function readData(){
 try{
   if(window.localStorage){
     let tasks = JSON.parse(window.localStorage.getItem('tasks'));
