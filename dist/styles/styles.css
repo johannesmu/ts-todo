@@ -15,45 +15,69 @@ img {
   display: flex;
   flex-direction: row; }
 
-.app img {
-  max-width: 100%; }
-
-.app .row {
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
   display: flex;
-  flex-direction: row; }
-
-.app header {
-  background-color: #e3d98c; }
-  .app header .logo {
-    max-width: 48px; }
-    .app header .logo img {
-      display: block;
-      max-width: 100%; }
-  .app header .row {
-    justify-content: space-between; }
-    .app header .row h1 {
+  flex-direction: column;
+  position: relative; }
+  .app img {
+    max-width: 100%; }
+  .app .row {
+    display: flex;
+    flex-direction: row; }
+  .app header {
+    max-height: 15vh;
+    background-color: #e3d98c; }
+    .app header .logo {
+      max-width: 48px; }
+      .app header .logo img {
+        display: block;
+        max-width: 100%; }
+    .app header .row {
+      justify-content: space-between; }
+      .app header .row h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+        padding: 10px; }
+  .app #task-form .row #task-input {
+    flex: 1;
+    border: 1px solid #cccccc;
+    display: block;
+    background-color: #eee;
+    padding: 12px; }
+  .app #task-form .row #task-input:focus {
+    outline: 0;
+    background-color: #fff; }
+  .app #task-form .row button#task-add {
+    padding: 12px;
+    min-width: 100px;
+    background-color: #d9cb63;
+    border: 1px solid #c1b02f; }
+  .app #task-form .row #task-add:focus {
+    outline: 0;
+    background-color: #837820;
+    color: #fff; }
+  .app .main {
+    flex: auto; }
+    .app .main ul#task-list {
       margin: 0;
       padding: 0;
-      font-size: 1.2em;
-      padding: 10px; }
-
-.app #task-form .row #task-input {
-  flex: 1;
-  border: 1px solid #cccccc;
-  display: block;
-  background-color: #eee;
-  padding: 12px; }
-
-.app #task-form .row #task-input:focus {
-  outline: 0;
-  background-color: #fff; }
-
-.app #task-form .row #task-add {
-  padding: 12px;
-  min-width: 100px;
-  background-color: #d9cb63; }
-
-.app #task-form .row #task-add:focus {
-  outline: 0;
-  background-color: #837820;
-  color: #fff; }
+      max-height: 85vh;
+      overflow-y: scroll;
+      list-style: none; }
+      .app .main ul#task-list li {
+        padding: 1em;
+        background-color: white;
+        border-bottom: 1px solid #eeeeee; }
+  .app footer {
+    position: absolute;
+    bottom: 0; }
+    .app footer nav {
+      display: flex;
+      flex-direction: row; }
+      .app footer nav button {
+        display: block;
+        padding: 12px;
+        flex: 1; }

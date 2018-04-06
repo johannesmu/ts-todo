@@ -14,13 +14,15 @@ html
         form#task-form
           .row
             input#task-input(type='text',placeholder='Add Task')
-            button#task-add(type='button') Add
+            button#task-add(type='submit') Add
       main.main
         ul#task-list
           li buy milk
-      footer.footer
-        nav.buttons
-          button(type='button') Remove
-          button(type='button') Archive
-      script(src='./js/main.js')
+          li finish assignments
+    script(src='./js/main.js')
+  template#task-templates
+    li(id='',data-status='0')
+      .task-name task name
+      button(type='button',data-function='status')
+      button(type='button',data-function='delete')
       

@@ -2,9 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
+@mixin display($disp){
+  display: $disp;
+}
 @mixin flex($direction){
-  display: flex;
+  $disp: flex;
+  @include display($disp);
   flex-direction: $direction;
 }
 
@@ -16,10 +19,7 @@
   box-sizing: border-box;
 }
 
-@mixin block{
-  display: block;
-}
 @mixin image-style{
-  @include block;
+  @include display(block);
   max-width: 100%;
 }

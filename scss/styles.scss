@@ -18,6 +18,10 @@ img{
 }
 
 .app{
+  min-height: 100vh;
+  overflow-x: hidden;
+  @include flex(column);
+  position:relative;
   img{
     max-width: 100%;
   }
@@ -25,6 +29,7 @@ img{
     @include flex(row);
   }
   header{
+    max-height:15vh;
     background-color: darken($main-color,15%);
     .logo{
       max-width: 48px;
@@ -46,7 +51,7 @@ img{
       #task-input{
         flex: 1;
         border:1px solid #cccccc;
-        @include block;
+        @include display(block);
         background-color:#eee;
         padding: $form-padding;
       }
@@ -54,10 +59,11 @@ img{
         outline: 0;
         background-color:#fff;
       }
-      #task-add{
+      button#task-add{
         padding: $form-padding;
         min-width:100px;
         background-color: darken($main-color,25%);
+        border:1px solid darken($main-color,40%);
       }
       #task-add:focus{
         outline:0;
@@ -66,5 +72,34 @@ img{
       }
     }
   }
-}
+  .main{
+    flex:auto;
+    ul#task-list{
+      @include reset;
+      max-height: 85vh;
+      overflow-y: scroll;
+      list-style: none;
+      li{
+        padding:1em;
+        background-color: lighten( $main-color, 40%);
+        border-bottom: 1px solid #eeeeee;
+      }
+      li:active{
 
+      }
+    }
+  }
+  footer{
+    position:absolute;
+    bottom:0;
+    nav{
+      @include flex(row);
+      button{
+        @include display(block);
+        padding:$form-padding;
+        flex:1;
+      }
+    }
+
+  }
+}

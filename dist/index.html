@@ -17,22 +17,24 @@
         <form id="task-form">
           <div class="row">
             <input id="task-input" type="text" placeholder="Add Task">
-            <button id="task-add" type="button">Add</button>
+            <button id="task-add" type="submit">Add</button>
           </div>
         </form>
       </header>
       <main class="main">
         <ul id="task-list">
           <li>buy milk</li>
+          <li>finish assignments</li>
         </ul>
       </main>
-      <footer class="footer">
-        <nav class="buttons">
-          <button type="button">Remove</button>
-          <button type="button">Archive</button>
-        </nav>
-      </footer>
-      <script src="./js/main.js"></script>
     </div>
+    <script src="./js/main.js"></script>
   </body>
+  <template id="task-templates">
+    <li id="" data-status="0">
+      <div class="task-name">task name</div>
+      <button type="button" data-function="status"></button>
+      <button type="button" data-function="delete"></button>
+    </li>
+  </template>
 </html>

@@ -1,0 +1,9 @@
+{
+    "files": [
+        "ts/main-module.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}

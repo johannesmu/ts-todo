@@ -7,5 +7,6 @@ export class Task{
     this.name = name;
     this.id = new Date().getTime();
     this.status = false;
+    return this;
   }
 }

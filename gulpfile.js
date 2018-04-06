@@ -7,17 +7,24 @@ var prettify = require('gulp-prettify');
 var runsequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var tsify = require("tsify");
 
 var buildpath = './dist';
 
 gulp.task('ts', function () {
-    return gulp.src('./ts/*.ts')
-        .pipe(ts({
-            //noImplicitAny: true,
-            module: 'es6',
-            outFile: 'main.js'
-        }))
-        .pipe(gulp.dest(buildpath+'/js'));
+  return browserify({
+        basedir: '.',
+        debug: true,
+        entries: ['ts/main-module.ts'],
+        cache: {},
+        packageCache: {}
+    })
+    .plugin(tsify)
+    .bundle()
+    .pipe(source('main.js'))
+    .pipe(gulp.dest( buildpath + "/js"));
 });
 
 gulp.task('html', function () {
